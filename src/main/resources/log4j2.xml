@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+    <Appenders>
+        <NoSql name="databaseAppender">
+            <MongoDb databaseName="logs" collectionName="logs" server="10.2.103.64" port="27017"
+                     username="sda" password="123456"/>
+        </NoSql>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="databaseAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
